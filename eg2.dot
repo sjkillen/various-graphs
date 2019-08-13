@@ -2,7 +2,7 @@ digraph G {
     node[shape="square"]
     z[label="z = 0\ni = 0"]
 
-    z -> cond1
+    z -> cond1 [ label="z = ⊤" ]
 
 	subgraph cluster_0 {
         cond1[label="if i < 10"]
