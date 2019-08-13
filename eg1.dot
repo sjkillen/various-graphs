@@ -1,0 +1,17 @@
+digraph G {
+    node[shape="square"]
+    z[label="z = 0\ni = 0"]
+
+    z -> cond1
+
+	subgraph cluster_0 {
+        cond1[label="if i < 10"]
+        loopbody1[label="print(i)\ni++"]
+        end
+
+        cond1 -> loopbody1, end
+        loopbody1 -> cond1
+	}
+
+    
+}

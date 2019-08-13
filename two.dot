@@ -1,0 +1,29 @@
+digraph {
+    node[style="filled"]
+    zero[label="A"]
+    a[label="B",fillcolor="brown"]
+    b[label="C",fillcolor="tomato"]
+    c[label="D",fillcolor="tomato"]
+    d[label="E",fillcolor="tomato"]
+    end[label="F"]
+    z[label="G",fillcolor="tomato"]
+    z2[label="H",fillcolor="tomato"]
+    z3[label="I",fillcolor="tomato"]
+    c2[label="J",fillcolor="tomato"]
+    d2[label="K",fillcolor="tomato"]
+
+
+
+    zero -> a
+    a -> b
+    b -> c
+    b -> c2
+    c -> d
+    d -> z
+    d -> end
+    z -> z2
+    z2 -> z3
+    z3 -> a
+    c2 -> d2
+    d2 -> a
+}

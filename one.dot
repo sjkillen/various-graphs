@@ -1,0 +1,28 @@
+digraph {
+    zero[label="A"]
+    a[label="B"]
+    b[label="C"]
+    c[label="D"]
+    d[label="E"]
+    end[label="F"]
+    z[label="G"]
+    z2[label="H"]
+    z3[label="I"]
+    c2[label="J"]
+    d2[label="K"]
+
+
+
+    zero -> a
+    a -> b
+    b -> c
+    b -> c2
+    c -> d
+    d -> z
+    d -> end
+    z -> z2
+    z2 -> z3
+    z3 -> a
+    c2 -> d2
+    d2 -> a
+}
