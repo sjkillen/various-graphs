@@ -9,7 +9,7 @@ digraph G {
         loopbody1[label="print(i)\ni++"]
         end
 
-        cond1 -> loopbody1, end [label="z = ⊤"]
-        loopbody1 -> cond1  [label="z = ⊤"]
+        cond1 -> loopbody1, end [ label="z = 0" ]
+        loopbody1 -> cond1 [ label="z = 0" ]
 	}    
 }

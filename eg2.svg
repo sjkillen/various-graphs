@@ -31,7 +31,7 @@
 <title>z&#45;&gt;cond1</title>
 <path fill="none" stroke="#000000" d="M106,-272.8251C106,-261.0577 106,-246.3063 106,-232.5808"/>
 <polygon fill="#000000" stroke="#000000" points="109.5001,-232.3512 106,-222.3512 102.5001,-232.3513 109.5001,-232.3512"/>
-<text text-anchor="middle" x="124" y="-243.8" font-family="Times,serif" font-size="14.00" fill="#000000">z = ⊤</text>
+<text text-anchor="middle" x="120.5" y="-243.8" font-family="Times,serif" font-size="14.00" fill="#000000">z = 0</text>
 </g>
 <!-- loopbody1 -->
 <g id="node3" class="node">
