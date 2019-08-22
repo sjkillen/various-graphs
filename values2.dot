@@ -1,0 +1,54 @@
+digraph G {
+    node[shape="square", style="filled"]
+    graph [pad="0.5", nodesep="1", ranksep="2"];
+    rank=same;
+    
+    1[fillcolor="green"]
+    2[fillcolor="green"]
+    3[fillcolor="green"]
+    4[fillcolor="green"]
+
+
+	subgraph cluster_0 {
+        label="Before the loop"
+        a_out[label="a"]
+        b_out[label="b"]
+        c_out[label="c"]
+        d_out[label="d"]
+
+        a_out -> 1
+        b_out -> 2
+        c_out -> 3
+        d_out -> 4
+    }
+
+    subgraph cluster_1 {
+        label="Right before the loop"
+
+        d_preloop[label="d"] 
+        c_preloop[label="c"] 
+        b_preloop[label="b"] 
+        a_preloop[label="a"] 
+
+        d_preloop -> d_out, 1
+        c_preloop-> d_out, 1
+        b_preloop -> c_out, 1
+        a_preloop -> b_out, 1
+    }
+
+	subgraph cluster_2 {
+        label="Inside the loop"
+
+        d_loop[label="d"] 
+        c_loop[label="c"] 
+        b_loop[label="b"] 
+        a_loop[label="a"] 
+
+        d_loop -> d_preloop, 1
+        c_loop-> d_preloop, 1
+        b_loop -> c_preloop, 1
+        a_loop -> b_preloop, 1
+
+
+    }
+}

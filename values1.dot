@@ -1,0 +1,13 @@
+digraph G {
+    node[shape="square", style="filled"]
+    
+    1[fillcolor="green"]
+    2[fillcolor="green"]
+    3[fillcolor="green"]
+    4[fillcolor="green"]
+
+    a -> 1
+    b -> 2
+    c -> 3
+    d -> 4
+}
