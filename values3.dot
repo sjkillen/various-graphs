@@ -1,0 +1,39 @@
+digraph G {
+    node[shape="square", style="filled"]
+    graph [pad="0.5", nodesep="1", ranksep="2"];
+    rank=same;
+    
+    1[fillcolor="green"]
+    2[fillcolor="green"]
+    3[fillcolor="green"]
+    4[fillcolor="green"]
+
+
+	subgraph cluster_0 {
+        label="Before the loop"
+        a_out[label="0:a"]
+        b_out[label="1:b"]
+        c_out[label="2:c"]
+        d_out[label="3:d"]
+
+        a_out -> 1
+        b_out -> 2
+        c_out -> 3
+        d_out -> 4
+    }
+
+    subgraph cluster_3 {
+        label="Unified loop"
+
+        a_unify[label="0:a or (b + 1)"]
+        b_unify[label="1:b or (c + 1)"]
+        c_unify[label="2:c or (d + 1)"]
+        d_unify[label="3:d"]
+
+        a_unify -> a_out, b_unify, 1
+        b_unify -> b_out, c_unify, 1
+        c_unify -> c_out, d_unify, 1
+        d_unify -> d_unify, 1
+
+    }
+}

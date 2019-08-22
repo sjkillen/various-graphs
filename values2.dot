@@ -11,10 +11,10 @@ digraph G {
 
 	subgraph cluster_0 {
         label="Before the loop"
-        a_out[label="a"]
-        b_out[label="b"]
-        c_out[label="c"]
-        d_out[label="d"]
+        a_out[label="0:a"]
+        b_out[label="1:b"]
+        c_out[label="2:c"]
+        d_out[label="3:d"]
 
         a_out -> 1
         b_out -> 2
@@ -23,31 +23,31 @@ digraph G {
     }
 
     subgraph cluster_1 {
-        label="Right before the loop"
+        label="At the top of the loop"
 
-        d_preloop[label="d"] 
-        c_preloop[label="c"] 
-        b_preloop[label="b"] 
-        a_preloop[label="a"] 
+        a_preloop[label="0:a"] 
+        b_preloop[label="1:b"] 
+        c_preloop[label="2:c"] 
+        d_preloop[label="3:d"] 
 
+        a_preloop -> a_out, 1
+        b_preloop -> b_out, 1
+        c_preloop -> c_out, 1
         d_preloop -> d_out, 1
-        c_preloop-> d_out, 1
-        b_preloop -> c_out, 1
-        a_preloop -> b_out, 1
     }
 
 	subgraph cluster_2 {
-        label="Inside the loop"
+        label="At the bottom of the loop"
 
-        d_loop[label="d"] 
-        c_loop[label="c"] 
-        b_loop[label="b"] 
-        a_loop[label="a"] 
+        a_loop[label="0:b + 1"] 
+        b_loop[label="1:c + 1"] 
+        c_loop[label="2:d + 1"] 
+        d_loop[label="3:d++"] 
 
-        d_loop -> d_preloop, 1
-        c_loop-> d_preloop, 1
-        b_loop -> c_preloop, 1
         a_loop -> b_preloop, 1
+        b_loop -> c_preloop, 1
+        c_loop-> d_preloop, 1
+        d_loop -> d_preloop, 1
 
 
     }
