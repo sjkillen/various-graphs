@@ -25,7 +25,8 @@ digraph {
                 label="Inside Loop"
 
                 b2[label="48 * 300", fillcolor="green"]
-                c2[label="c + 1", fillcolor="blue"]
+                c2[label="c + 1", fillcolor="grey"]
+                d[label="d + 1", fillcolor="blue"]
             }
         }
     }
@@ -36,6 +37,7 @@ digraph {
     c -> _0
     b2 -> _48, _300
     c2 -> c, _1
+    d -> c2
 
     {rank = same; _0; _1; _48; _300; }
     {rank = same; a; b; c; }
