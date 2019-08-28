@@ -9,7 +9,7 @@ digraph {
 
         _0[label="0"]
         _1[label="1"]
-        _48[label="48"]
+        _2[label="2"]
         _300[label="300"]
 
 
@@ -24,9 +24,9 @@ digraph {
             subgraph cluster_0 {
                 label="Inside Loop"
 
-                b2[label="48 * 300", fillcolor="green"]
+                b2[label="a + 300", fillcolor="green"]
                 c2[label="c + 1", fillcolor="lightblue"]
-                d[label="d + 1", fillcolor="blue"]
+                d[label="c * 2", fillcolor="blue"]
             }
         }
     }
@@ -35,11 +35,11 @@ digraph {
     a -> _0
     b -> _0
     c -> _0
-    b2 -> _48, _300
+    b2 -> a, _300
     c2 -> c, _1
-    d -> c2
+    d -> c2, _2
 
-    {rank = same; _0; _1; _48; _300; }
+    {rank = same; _0; _1; _2; _300; }
     {rank = same; a; b; c; }
     {rank = same; b2; c2}
 }
