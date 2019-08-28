@@ -1,0 +1,43 @@
+digraph {
+    rankdir=BT
+    newrank=true;
+    graph [pad="0.5", nodesep="1", ranksep="1"];
+    node[shape="circle", style="filled", fillcolor="grey", label=" "]
+
+    subgraph clusterStatic {
+        label="Static"
+
+        _0[label="0"]
+        _1[label="1"]
+        _48[label="48"]
+        _300[label="300"]
+
+
+        subgraph clusterPreLoop {
+            label="Preloop"
+
+            b[label="b", fillcolor="green"]
+            a[label="a", fillcolor="red"]
+            c[label="c", fillcolor="blue"]
+
+            
+            subgraph cluster_0 {
+                label="Inside Loop"
+
+                b2[label="48 * 300", fillcolor="green"]
+                c2[label="c + 1", fillcolor="blue"]
+            }
+        }
+    }
+
+
+    a -> _0
+    b -> _0
+    c -> _0
+    b2 -> _48, _300
+    c2 -> c, _1
+
+    {rank = same; _0; _1; _48; _300; }
+    {rank = same; a; b; c; }
+    {rank = same; b2; c2}
+}
