@@ -105,7 +105,7 @@
 <!-- c2 -->
 <g id="node9" class="node">
 <title>c2</title>
-<ellipse fill="#c0c0c0" stroke="#000000" cx="83" cy="-275.0409" rx="29.4969" ry="29.4969"/>
+<ellipse fill="#add8e6" stroke="#000000" cx="83" cy="-275.0409" rx="29.4969" ry="29.4969"/>
 <text text-anchor="middle" x="83" y="-271.3409" font-family="Times,serif" font-size="14.00" fill="#000000">c + 1</text>
 </g>
 <!-- c2&#45;&gt;_1 -->

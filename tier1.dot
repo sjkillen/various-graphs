@@ -25,7 +25,7 @@ digraph {
                 label="Inside Loop"
 
                 b2[label="48 * 300", fillcolor="green"]
-                c2[label="c + 1", fillcolor="grey"]
+                c2[label="c + 1", fillcolor="lightblue"]
                 d[label="d + 1", fillcolor="blue"]
             }
         }
