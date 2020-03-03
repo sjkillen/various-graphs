@@ -5,6 +5,6 @@ LABEL maintainer="sjkillen@ualberta.ca"
 
 RUN apt-get -qq update
 RUN apt-get -qq install graphviz
-RUN pip3 install graphviz frozendict more-itertools
+RUN pip3 install graphviz frozendict more-itertools networkx
 
 ENTRYPOINT ["python3"]
